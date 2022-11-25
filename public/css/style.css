@@ -1,0 +1,58 @@
+body
+{
+    background: #474747;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+.circle {
+    position: absolute;
+    background-color: #4044ED;
+    height: 1331px;
+    width: 1024px;
+    margin: -19px -545px;
+    border-radius: 100%;
+}
+.circle2{
+    position: absolute;
+    background-color: #4044ED;
+    height: 713px;
+    width: 771px;
+    margin: -1099px 1057px;
+    border-radius: 100%;
+}
+#login {
+    position: absolute;
+    margin-top: 172px;
+    margin-left: 436px;
+    font-size: 42px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    
+}
+#formulario {
+    position: absolute;
+    margin-top: 269px;
+    margin-left: 436px;
+}
+.formu {
+    border-radius: 112px;
+    height: 34px;
+    width: 183px;
+    text-align: center;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+#sub {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(114, 113, 113);
+    position: absolute;
+    height: 38px;
+    width: 378px;
+    margin: 42px -378px;
+    border-radius: 25px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
