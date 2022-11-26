@@ -3,6 +3,15 @@ const app = express()
 const port = 3000
 const path = require('path')
 
+const mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "tess"
+});
+
 const basepath = path.join(__dirname, 'templates')
 
 app.use(express.static('public'))
@@ -23,11 +32,15 @@ app.get('/users/add', (req, res)=>{
 
 app.post('/users/save', (req, res)=>{
     console.log(req.body)
-    const name = req.body.name
-    const senha = req.body.senha
+    const { name } = req.body;
+    const { senha } = req.body;
 
-    res.send(`bem vindo ${name} senha: ${senha}` )
+    let mysql = "INSERT INTO customers (name, senha) VALUES (?, ?)";
+    con.query(mysql, [name, senha], (err, result) => {
+    res.send(result);
+    });
 })
+
 
 
 app.get('/', (req, res)=>{
