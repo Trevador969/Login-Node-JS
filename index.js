@@ -41,7 +41,22 @@ app.post('/users/save', (req, res)=>{
     });
 })
 
-
+app.get('/users/save', function (req, res) {
+    const query = `SELECT * FROM customers`
+  
+    conn.query(query, function (err, data) {
+      if (err) {
+        console.log(err)
+      }
+  
+      const books = data
+  
+      console.log(data)
+  
+      res.render('books', { books })
+    })
+  })
+  
 
 app.get('/', (req, res)=>{
     res.sendFile(`${basepath}/index.html`)
